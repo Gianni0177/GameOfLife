@@ -1,6 +1,7 @@
 function tabellagen(){
     numc = document.getElementById("num").value;
 
+    document.write("<center><h1>Conway's game of Life</h1></center>");
     document.write('<button onclick="inizia()">Inizia</button>');
 
     /*x = */document.write('<table style = "border-collapse:collapse"  cellpadding=6>');
@@ -8,7 +9,7 @@ function tabellagen(){
         document.write('<tr>')
         
         for (j=1; j<=numc; j++) {
-            document.write('<td style="border:1px solid black" id="r' + i + 'c' + j +'"onclick="life(id)">');
+            document.write('<td id="r' + i + 'c' + j +'"onclick="life(id)" style="border:1px solid black" >');
             document.write('a<sub>' + i + ',' + j +'</sub>');
             document.write('</td>');
             r=document.createTextNode
@@ -23,8 +24,8 @@ function tabellagen(){
 function life(id){
     x = document.getElementById(id);
 
-    if(x.style.backgroundColor != 'yellow'){
-        x.style.backgroundColor = 'yellow';
+    if(x.style.backgroundColor != 'grey'){
+        x.style.backgroundColor = 'grey';
     }else x.style.backgroundColor = 'white'
 }
 function inizia(){
