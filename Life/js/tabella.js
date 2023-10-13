@@ -3,14 +3,15 @@ function tabellagen(){
 
     document.write('<button onclick="inizia()">Inizia</button>');
 
-    /*x = */document.write('<table border=1 cellpadding=6>');
+    /*x = */document.write('<table style = "border-collapse:collapse"  cellpadding=6>');
     for (i=1; i<=numc; i++) {
         document.write('<tr>')
         
         for (j=1; j<=numc; j++) {
-            document.write('<td id="r' + i + 'c' + j +'" onclick="life(id)">');
+            document.write('<td style="border:1px solid black" id="r' + i + 'c' + j +'"onclick="life(id)">');
             document.write('a<sub>' + i + ',' + j +'</sub>');
             document.write('</td>');
+            r=document.createTextNode
         }
         document.write('</tr>');
     }
@@ -22,9 +23,9 @@ function tabellagen(){
 function life(id){
     x = document.getElementById(id);
 
-    if(x.style.backgroundColor!='yellow'){
-        x.style.backgroundColor='yellow';
-    }else x.style.backgroundColor='white'
+    if(x.style.backgroundColor != 'yellow'){
+        x.style.backgroundColor = 'yellow';
+    }else x.style.backgroundColor = 'white'
 }
 function inizia(){
     if(
@@ -36,5 +37,3 @@ function inizia(){
 
     }
 }
-
-
